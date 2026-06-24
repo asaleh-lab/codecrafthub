@@ -1,0 +1,30 @@
+### Create a course
+POST http://localhost:8080/api/courses
+Content-Type: application/json
+
+{
+  "name": "Python Basics",
+  "description": "Learn Python fundamentals",
+  "target_date": "2025-12-31",
+  "status": "Not Started"
+}
+
+### Get all courses
+GET http://localhost:8080/api/courses
+
+### Get course by ID 1
+GET http://localhost:8080/api/courses/1
+
+### Update course ID 1 status to In Progress
+PUT http://localhost:8080/api/courses/1
+Content-Type: application/json
+
+{
+  "name": "Python Basics",
+  "description": "Learn Python fundamentals",
+  "target_date": "2025-12-31",
+  "status": "In Progress"
+}
+
+### Delete course ID 1
+DELETE http://localhost:8080/api/courses/1
